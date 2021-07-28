@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <head>
+    <!--Meta data-->
     <title>Spotify Web API Documentation</title>
     <meta name="documentation" content="Spotify Web API">
     <link rel="stylesheet" href="style-sheet.css">
 </head>
 <body>
+    <script src="scripts.js"></script>
+
+    <!--Hamburger menu-->
+    <button id="hamburger" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <!--Navigation bar, positioned absolutely at left-->
     <nav id="navbar" class="navbar">
-        <header>Spotify Web API</header>
-        <br>
-        <a class="nav-link" href="#search-api">Search API</a>
-        <br>
-        <a class="nav-link" href="#browse-api">Browse API</a>
-        <br>
-        <a class="nav-link" href="#follow-api">Follow API</a>
-        <br>
-        <a class="nav-link" href="#playlists-api">Playlists API</a>
-        <br>
-        <a class="nav-link" href="#library-api">Library API</a>
+        <div id="navbar-left" class="navbar-left">
+            <header>Spotify Web API</header>
+            <a class="nav-link" href="#search-api">Search API</a>
+            <a class="nav-link" href="#browse-api">Browse API</a>
+            <a class="nav-link" href="#follow-api">Follow API</a>
+            <a class="nav-link" href="#playlists-api">Playlists API</a>
+            <a class="nav-link" href="#library-api">Library API</a>
+        </div>
     </nav>
 </body>

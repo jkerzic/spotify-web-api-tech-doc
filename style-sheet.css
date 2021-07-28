@@ -1,6 +1,77 @@
+/* Hamburger menu */
+.hamburger{
+    position: fixed;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.hamburger.active{
+    transform: rotate(180deg);
+}
+.hamburger div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 4px 0;
+}
+.hamburger.active div:nth-child(1){
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger.active div:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active div:nth-child(3){
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.hamburger:hover{
+    background-color: slategray;
+    border-radius: 3px;
+}
+
+/* Navbar */
+.navbar{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
+.navbar.active{
+    pointer-events: auto;
+}
+.navbar-left{
+    position: relative;
+    z-index: 50;
+    left: -50%;
+    top: 0%;
+    width: 50%;
+    height: 100vh;
+    background-color: slategray;
+    transition: 0.8s;
+}
+.navbar-left.active{
+    left: 0;
+    transition: 0.5s;
+}
+.navbar-left header{
+    display: none;
+}
 .nav-link{
+    position: relative;
     text-decoration: none;
     color: black;
+    display: flex;
 }
 .nav-link:hover{
     color: blue;

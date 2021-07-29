@@ -10,8 +10,8 @@
 
     <!-- Hamburger menu -->
     <button id="hamburger" class="hamburger" href="javascript:void(0);" onclick="toggleMenu()">
-        <p id="hamburger-close" class="x-button" style="display: none;"><b>X</b></p>
-        <span id="hamburger-icon">
+        <p id="close-hamburger" class="x-button" style="display: none;"><b>X</b></p>
+        <span id="icon-hamburger">
             <div></div>
             <div></div>
             <div></div>
@@ -28,8 +28,70 @@
         <hr>
         <a class="nav-link" href="#follow-api">Follow API</a>
         <hr>
-        <a class="nav-link" href="#playlists-api">Playlists API</a>
+        <a class="nav-link" href="#albums-api">Albums API</a>
         <hr>
-        <a class="nav-link" href="#library-api">Library API</a>
+        <a class="nav-link" href="#artists-api">Artists API</a>
     </nav>
+
+    <!-- Main documentation -->
+    <main id="main-doc">
+
+        <!-- Search API section -->
+        <section id="search-api" class="main-section">
+            <header>Search API</header>
+            <ul>
+                <li>Search for an item</li>
+            </ul>
+        </section>
+
+        <!-- Browse API section -->
+        <section id="browse-api" class="main-section">
+            <header>Browse API</header>
+            <ul>
+                <li>Get All New Releases</li>
+                <li>Get All Featured Playlists</li>
+                <li>Get All Categories</li>
+                <li>Get a Category</li>
+                <li>Get a Category's Playlists</li>
+                <li>Get Recommendations</li>
+                <li>Get Recommendation Genres</li>
+            </ul>
+        </section>
+
+        <!-- Follow API section -->
+        <section id="follow-api" class="main-section">
+            <header>Follow API</header>
+            <ul>
+                <li>Follow a Playlist</li>
+                <li>Unfollow Playlist</li>
+                <li>Check if Users Follow a Playlist</li>
+                <li>Get User's Followed Artists</li>
+                <li>Follow Artists or Users</li>
+                <li>Unfollow Artists or Users</li>
+                <li>Get Following State for Artists/Users</li>
+            </ul>
+        </section>
+
+        <!-- Albums API section -->
+        <section id="albums-api" class="main-section">
+            <header>Albums API</header>
+            <ul>
+                <li>Get Multiple Albums</li>
+                <li>Get an Album</li>
+                <li>Get an Album's Tracks</li>
+            </ul>
+        </section>
+
+        <!-- Artists API section -->
+        <section id="artists-api" class="main-section">
+            <header>Artists API</header>
+            <ul>
+                <li>Get Multiple Artists</li>
+                <li>Get an Artist</li>
+                <li>Get an Artist's Top Tracks</li>
+                <li>Get an Artist's Related Artists</li>
+                <li>Get an Artist's Albums</li>
+            </ul>
+        </section>
+    </main>
 </body>

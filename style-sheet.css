@@ -65,6 +65,12 @@
     opacity: 50%;
 }
 
+/* Main content */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{

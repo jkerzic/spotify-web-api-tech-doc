@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <!--Meta data-->
+    <!-- Meta data -->
     <title>Spotify Web API Documentation</title>
     <meta name="documentation" content="Spotify Web API">
     <link rel="stylesheet" href="style-sheet.css">
@@ -8,14 +8,19 @@
 <body>
     <script src="scripts.js"></script>
 
-    <!--Hamburger menu-->
+    <!-- Hamburger menu -->
     <button id="hamburger" class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+        <a href="javascript:void(0);" onclick="toggleMenu()">
+        <p id="hamburger-close" class="x-button"><b>X</b></p>
+        <span id="hamburger-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+         </span>
+        </a>
     </button>
 
-    <!--Navigation bar, positioned absolutely at left-->
+    <!-- Navigation bar, positioned absolutely at left -->
     <nav id="navbar" class="navbar">
         <div id="navbar-left" class="navbar-left">
             <header>Spotify Web API</header>

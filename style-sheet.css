@@ -1,42 +1,43 @@
 /* Hamburger menu */
 .hamburger{
     position: fixed;
+    z-index: 100;
+    height: 50px;
+    width: 50px;
+    left: 10px;
     cursor: pointer;
     background-color: white;
     border: none;
-    display: flex;
+    display: block;
     flex-direction: column;
-    transition: 0.5s;
-}
-.hamburger.active{
-    transform: rotate(180deg);
-}
-.hamburger div{
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 4px 0;
-}
-.hamburger.active div:nth-child(1){
-    position: absolute;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-.hamburger.active div:nth-child(2){
-    opacity: 0;
-}
-.hamburger.active div:nth-child(3){
-    position: absolute;
-    background-color: black;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
 }
 .hamburger:hover{
     background-color: slategray;
     border-radius: 3px;
+}
+
+/* Menu closed */
+.hamburger div{
+    position: relative;
+    left: 3%;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 8px 0;
+}
+
+/* Menu open */
+.hamburger .x-button{
+    display: none;
+    position: relative;
+    top: -45%;
+    width: 35px;
+    height: 0px;
+    font-size: 40px;
+    color: black;
+}
+.hamburger a{
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -45,26 +46,6 @@
     height: 100vh;
     width: 100%;
     z-index: 100;
-    pointer-events: none;
-}
-.navbar.active{
-    pointer-events: auto;
-}
-.navbar-left{
-    position: relative;
-    z-index: 50;
-    left: -50%;
-    top: 0%;
-    width: 50%;
-    height: 100vh;
-    background-color: slategray;
-    transition: 0.8s;
-}
-.navbar-left.active{
-    left: 0;
-    transition: 0.5s;
-}
-.navbar-left header{
     display: none;
 }
 .nav-link{

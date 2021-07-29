@@ -28,7 +28,6 @@
 
 /* Menu close icon */
 .hamburger .x-button{
-    display: none;
     position: relative;
     top: -45%;
     width: 35px;

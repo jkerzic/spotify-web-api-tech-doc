@@ -1,14 +1,14 @@
 /* Hamburger menu */
 .hamburger{
     position: fixed;
+    display: block;
     z-index: 100;
     height: 50px;
     width: 50px;
-    left: 10px;
+    right: 10px;
     cursor: pointer;
     background-color: white;
     border: none;
-    display: block;
     flex-direction: column;
 }
 .hamburger:hover{
@@ -16,7 +16,7 @@
     border-radius: 3px;
 }
 
-/* Menu closed */
+/* Menu open icon */
 .hamburger div{
     position: relative;
     left: 3%;
@@ -26,7 +26,7 @@
     margin: 8px 0;
 }
 
-/* Menu open */
+/* Menu close icon */
 .hamburger .x-button{
     display: none;
     position: relative;
@@ -36,26 +36,34 @@
     font-size: 40px;
     color: black;
 }
-.hamburger a{
-    text-decoration: none;
-}
 
 /* Navbar */
 .navbar{
     position: fixed;
-    height: 100vh;
+    z-index: 99;
     width: 100%;
-    z-index: 100;
+    height: 100%;
     display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.nav-link{
-    position: relative;
+.navbar header{
+    font-size: 5vh;
+}
+.navbar hr{
+    width: 100%;
+    border-color: black;
+}
+.navbar .nav-link{
+    z-index: 99;
     text-decoration: none;
     color: black;
+    font-size: 4vh;
     display: flex;
 }
-.nav-link:hover{
-    color: blue;
+.navbar .nav-link:hover{
+    opacity: 50%;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -77,10 +85,14 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    .hamburger{
+        display: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+    .hamburger{
+        display: none;
+    }
 }

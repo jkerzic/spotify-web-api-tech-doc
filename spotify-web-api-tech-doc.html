@@ -4,31 +4,32 @@
     <title>Spotify Web API Documentation</title>
     <meta name="documentation" content="Spotify Web API">
     <link rel="stylesheet" href="style-sheet.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <script src="scripts.js"></script>
 
     <!-- Hamburger menu -->
-    <button id="hamburger" class="hamburger">
-        <a href="javascript:void(0);" onclick="toggleMenu()">
+    <button id="hamburger" class="hamburger" href="javascript:void(0);" onclick="toggleMenu()">
         <p id="hamburger-close" class="x-button"><b>X</b></p>
         <span id="hamburger-icon">
             <div></div>
             <div></div>
             <div></div>
-         </span>
-        </a>
+        </span>
     </button>
 
-    <!-- Navigation bar, positioned absolutely at left -->
+    <!-- Navigation bar -->
     <nav id="navbar" class="navbar">
-        <div id="navbar-left" class="navbar-left">
-            <header>Spotify Web API</header>
-            <a class="nav-link" href="#search-api">Search API</a>
-            <a class="nav-link" href="#browse-api">Browse API</a>
-            <a class="nav-link" href="#follow-api">Follow API</a>
-            <a class="nav-link" href="#playlists-api">Playlists API</a>
-            <a class="nav-link" href="#library-api">Library API</a>
-        </div>
+        <header><b>Spotify Web API</b></header>
+        <hr>
+        <a class="nav-link" href="#search-api">Search API</a>
+        <hr>
+        <a class="nav-link" href="#browse-api">Browse API</a>
+        <hr>
+        <a class="nav-link" href="#follow-api">Follow API</a>
+        <hr>
+        <a class="nav-link" href="#playlists-api">Playlists API</a>
+        <hr>
+        <a class="nav-link" href="#library-api">Library API</a>
     </nav>
 </body>

@@ -66,6 +66,10 @@
 }
 
 /* Main content */
+.stop-scrolling{
+    max-width: 100%;
+    overflow: hidden;
+}
 main{
     display: flex;
     flex-direction: column;

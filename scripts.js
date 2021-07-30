@@ -1,5 +1,11 @@
 //Toggles the hamburger menu
-function toggleMenu(){
+function toggleHamburger(){
+
+    //Don't function unless mobile device
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    if (mediaQuery.matches){
+        return
+    }
 
     //Elements
     var hamburger = document.getElementById("icon-hamburger");

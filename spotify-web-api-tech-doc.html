@@ -10,7 +10,7 @@
 <body>
 
     <!-- Hamburger menu -->
-    <button id="hamburger" class="hamburger" href="javascript:void(0);" onclick="toggleMenu()">
+    <button id="hamburger" class="hamburger" href="javascript:void(0);" onclick="toggleHamburger()">
         <p id="close-hamburger" class="x-button" style="display: none;"><b>X</b></p>
         <span id="icon-hamburger">
             <div></div>
@@ -23,15 +23,15 @@
     <nav id="navbar" class="navbar">
         <header><b>Spotify Web API</b></header>
         <hr>
-        <a class="nav-link" href="#search-api">Search API</a>
+        <a class="nav-link" href="#search-api" onclick="toggleHamburger()">Search API</a>
         <hr>
-        <a class="nav-link" href="#browse-api">Browse API</a>
+        <a class="nav-link" href="#browse-api" onclick="toggleHamburger()">Browse API</a>
         <hr>
-        <a class="nav-link" href="#follow-api">Follow API</a>
+        <a class="nav-link" href="#follow-api" onclick="toggleHamburger()">Follow API</a>
         <hr>
-        <a class="nav-link" href="#albums-api">Albums API</a>
+        <a class="nav-link" href="#albums-api" onclick="toggleHamburger()">Albums API</a>
         <hr>
-        <a class="nav-link" href="#artists-api">Artists API</a>
+        <a class="nav-link" href="#artists-api" onclick="toggleHamburger()">Artists API</a>
     </nav>
 
     <!-- Main documentation -->

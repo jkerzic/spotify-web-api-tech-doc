@@ -2,7 +2,7 @@
 function toggleHamburger(){
 
     //Don't function unless mobile device
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    const mediaQuery = window.matchMedia('(min-width: 992px)')
     if (mediaQuery.matches){
         return
     }

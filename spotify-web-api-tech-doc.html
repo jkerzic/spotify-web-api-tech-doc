@@ -48,8 +48,8 @@
                     <table>
                         <tr>
                             <th>HEADER</th>
-                            <th>TYPE</th>
-                            <th>REQUIRED</th>
+                            <th class="type-required">TYPE</th>
+                            <th class="type-required">REQUIRED</th>
                         </tr>
                         <tr>
                             <td>
@@ -60,7 +60,15 @@
                                 for details.
                             </td>
                             <td>String</td>
-                            <td class="required">Required</td>
+                            <td class="required-parameter">Required</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>QUERY PARAMETER</th>
+                            <th class="type-required">TYPE</th>
+                            <th class="type-required">REQUIRED</th>
                         </tr>
                         <tr>
                             <td>
@@ -70,45 +78,94 @@
                                 <br>
                                 For example:
                                 <br>
-                                <code>q=roadhouse%20blues</code>
+                                <code>q=roadhouse%20blues</code>.
                             </td>
                             <td>String</td>
-                            <td class="required">Required</td>
+                            <td class="required-parameter">Required</td>
                         </tr>
                         <tr>
                             <td>
                                 <code class="table-item">type</code>
+                                <br>
+                                A comma-separated list of item types to search across.
+                                <br>
+                                Valid types are: <code>album</code>, <code>artist</code>, <code>playlist</code>, <code>track</code>, <code>show</code> and <code>episode</code>.
+                                <br>
+                                Search results include hits from all the specified item types.
+                                <br>
+                                For example: <code>q=name:abacab&type=album,track</code> returns both albums <i><b>and</b></i> tracks with “abacab” included in their name.
                             </td>
                             <td>String</td>
-                            <td class="required">Required</td>
+                            <td class="required-parameter">Required</td>
                         </tr>
                         <tr>
                             <td>
                                 <code class="table-item">market</code>
+                                <br>
+                                An <a class="table-link" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 alpha-2 country code</a>
+                                or the string <code>from_token</code>.
+                                <br>
+                                If a country code is specified, only content that is playable in that market is returned.
+                                <br>
+                                <b>Note</b>:
+                                <br>
+                                - Playlist results are not affected by the market parameter.
+                                <br>
+                                - If market is set to <code>from_token</code>, and a valid access token is specified in the request header, only content playable in the country associated with the user account, is returned.
+                                <br>
+                                - Users can view the country that is associated with their account in the 
+                                <a class="table-link" href="https://www.spotify.com/na-en/account/overview/">account settings</a>. 
+                                A user must grant access to the <code>user-read-private</code> scope prior to when the access token is issued.
                             </td>
                             <td>String</td>
-                            <td class="optional">Optional</td>
+                            <td class="optional-parameter">Optional</td>
                         </tr>
                         <tr>
                             <td>
                                 <code class="table-item">limit</code>
+                                <br>
+                                Maximum number of results to return.
+                                <br>
+                                Default: 20
+                                <br>
+                                Minimum: 1
+                                <br>
+                                Maximum: 50
+                                <br>
+                                <b>Note</b>: The limit is applied within each type, not on the total response.
+                                <br>
+                                For example, if the limit value is 3 and the type is <code>artist,album</code>, the response contains 3 artists and 3 albums.
                             </td>
                             <td>Integer</td>
-                            <td class="optional">Optional</td>
+                            <td class="optional-parameter">Optional</td>
                         </tr>
                         <tr>
                             <td>
                                 <code class="table-item">offset</code>
+                                <br>
+                                The index of the first result to return.
+                                <br>
+                                Default: 0 (the first result).
+                                <br>
+                                Maximum offset (including limit): 1,000.
+                                <br>
+                                Use with limit to get the next page of search results.
                             </td>
                             <td>Integer</td>
-                            <td class="optional">Optional</td>
+                            <td class="optional-parameter">Optional</td>
                         </tr>
                         <tr>
                             <td>
                                 <code class="table-item">include_external</code>
+                                <br>
+                                Possible values: audio
+                                <br>
+                                If include_external=audio is specified the response will include any relevant audio content that is hosted externally.
+                                <br>
+                                By default external content is filtered out from responses.
                             </td>
                             <td>String</td>
-                            <td class="optional">Optional</td>
+                            <td class="optional-parameter">Optional</td>
                         </tr>
                     </table>
             </ul>

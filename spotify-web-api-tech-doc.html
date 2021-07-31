@@ -42,6 +42,75 @@
             <header>Search API</header>
             <ul>
                 <li>Search for an item</li>
+                <p>Get Spotify Catalog information about albums, artists, playlists, tracks, shows or episodes that match a keyword string.</p>
+                    <header><b>Request</b></header>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>HEADER</th>
+                            <th>TYPE</th>
+                            <th>REQUIRED</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">Authorization</code>
+                                <br>
+                                A valid access token from the Spotify Accounts service: see the 
+                                <a class="table-link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" target="_blank">Web API Authorization Guide</a> 
+                                for details.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">q</code>
+                                <br>
+                                Search query keywords and optional field filters and operators.
+                                <br>
+                                For example:
+                                <br>
+                                <code>q=roadhouse%20blues</code>
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">type</code>
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">market</code>
+                            </td>
+                            <td>String</td>
+                            <td class="optional">Optional</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">limit</code>
+                            </td>
+                            <td>Integer</td>
+                            <td class="optional">Optional</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">offset</code>
+                            </td>
+                            <td>Integer</td>
+                            <td class="optional">Optional</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">include_external</code>
+                            </td>
+                            <td>String</td>
+                            <td class="optional">Optional</td>
+                        </tr>
+                    </table>
             </ul>
         </section>
 
@@ -50,45 +119,6 @@
             <header>Browse API</header>
             <ul>
                 <li id="browse-new-releases">Get All New Releases</li>
-                    <p>Get Spotify Catalog information about albums, artists, playlists, tracks, shows or episodes that match a keyword string.</p>
-                    <header><b>Request</b></header>
-                    <table>
-                        <tr>
-                            <td>HEADER</td>
-                            <td>TYPE</td>
-                            <td>REQUIRED</td>
-                        </tr>
-                        <tr>
-                            <td>Authorization</td>
-                            <td>String</td>
-                            <td>Required</td>
-                        </tr>
-                        <tr>
-                            <td>q</td>
-                            <td>String</td>
-                            <td>Required</td>
-                        </tr>
-                        <tr>
-                            <td>type</td>
-                            <td>String</td>
-                            <td>Required</td>
-                        </tr>
-                        <tr>
-                            <td>limit</td>
-                            <td>Integer</td>
-                            <td>Optional</td>
-                        </tr>
-                        <tr>
-                            <td>offset</td>
-                            <td>Integer</td>
-                            <td>Optional</td>
-                        </tr>
-                        <tr>
-                            <td>include_external</td>
-                            <td>String</td>
-                            <td>Optional</td>
-                        </tr>
-                    </table>
                 <li>Get All Featured Playlists</li>
                 <li>Get All Categories</li>
                 <li>Get a Category</li>

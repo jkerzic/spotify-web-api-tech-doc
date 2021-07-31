@@ -75,11 +75,51 @@ main{
     flex-direction: column;
 }
 
+/* Table content */
+table{
+    border-collapse: collapse;
+    line-height: 1.5;
+}
+tr {
+    border: solid;
+    border-color: lightgray;
+    border-left: none;
+    border-right: none;
+}
+tr:first-child{
+    border-top: none;
+}
+tr:last-child{
+    border-bottom: none;
+}
+th{
+    text-align: left;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+code{
+    background: gainsboro;
+}
+.table-link{
+    text-decoration: none;
+    color: orange;
+}
+.table-link:hover{
+    color: #e69500
+}
+.table-item{
+    font-size: 150%;
+}
+.required{
+    font-weight: bold;
+}
+.optional{
+    font-style: italic;
+}
+
 /* Extra small devices (phones, 768px and down) */
 @media only screen and (max-width: 768px) {
-    body{
-        background: gray;
-    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

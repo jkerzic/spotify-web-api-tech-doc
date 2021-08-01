@@ -87,11 +87,11 @@ main{
     list-style: none;
 }
 .main-section li{
-    font-size: 125%;
+    font-size: 160%;
     font-weight: bold;
 }
 .main-section div{
-    font-size: 125%;
+    font-size: 110%;
 }
 .main-section table{
     font-size: 80%;

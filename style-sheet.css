@@ -90,7 +90,7 @@ main{
 .main-section ul{
     list-style: none;
 }
-.main-section .api-function{
+.main-section .api-query{
     font-size: 160%;
     font-weight: bold;
 }
@@ -103,8 +103,15 @@ main{
     padding-right: 5px;
     border-radius: 3px;
 }
+.main-section .link{
+    text-decoration: none;
+    color: orange;
+}
+.main-section .link:hover{
+    color: #e69500
+}
 
-/* Main section request table */
+/* Main section query request */
 .main-section .request{
     font-size: 110%;
 }
@@ -117,14 +124,39 @@ main{
 .main-section .request .table-item{
     font-size: 120%;
 }
+.main-section .request tr {
+    border: solid;
+    border-color: lightgray;
+    border-left: none;
+    border-right: none;
+}
+.main-section .request tr:first-child{
+    border-top: none;
+}
+.main-section .request tr:last-child{
+    border-bottom: none;
+}
+.main-section .request th{
+    text-align: left;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+.main-section .request td{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
 .main-section .request .required-parameter{
     font-weight: bold;
 }
 .main-section .request .optional-parameter{
     font-style: italic;
 }
+.main-section .request .type-required{
+    width: 10%;
+}
 
-/* Main section response result */
+
+/* Main section query response */
 .main-section .response{
     font-size: 110%;
 }
@@ -140,49 +172,6 @@ main{
 }
 .main-section .response li{
     margin: 10px;
-}
-
-/* Table classes */
-.type-required{
-    width: 10%;
-}
-.link{
-    text-decoration: none;
-    color: orange;
-}
-.link:hover{
-    color: #e69500
-}
-.required-parameter{
-    font-weight: bold;
-}
-.optional-parameter{
-    font-style: italic;
-}
-
-/* Table rows */
-tr {
-    border: solid;
-    border-color: lightgray;
-    border-left: none;
-    border-right: none;
-}
-tr:first-child{
-    border-top: none;
-}
-tr:last-child{
-    border-bottom: none;
-}
-td{
-    padding-top: 5px;
-    padding-bottom: 15px;
-}
-
-/* Table header */
-th{
-    text-align: left;
-    font-weight: normal;
-    padding-bottom: 5px;
 }
 
 /* Extra small devices (phones, 768px and down) */

@@ -39,15 +39,14 @@
 
         <!-- Search API section -->
         <section id="search-api" class="main-section">
-            <header>Search API</header>
+            <header class="section-header">Search API</header>
             <ul>
-                <li>Search for an item</li>
+                <li class="api-function">Search for an item</li>
                 <p>Get Spotify Catalog information about albums, artists, playlists, tracks, shows or episodes that match a keyword string.</p>
 
                 <!-- Search request -->
-                <div>
-                    <b>Request</b>
-                    <br><br>
+                <div class="request">
+                    <header>Request</header>
 
                     <!-- Query header -->
                     <table>
@@ -63,7 +62,7 @@
                                 <code class="table-item">Authorization</code>
                                 <br>
                                 A valid access token from the Spotify Accounts service: see the 
-                                <a class="table-link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" target="_blank">Web API Authorization Guide</a> 
+                                <a class="link" href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" target="_blank">Web API Authorization Guide</a> 
                                 for details.
                             </td>
                             <td>String</td>
@@ -117,7 +116,7 @@
                             <td>
                                 <code class="table-item">market</code>
                                 <br>
-                                An <a class="table-link" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 alpha-2 country code</a>
+                                An <a class="link" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">ISO 3166-1 alpha-2 country code</a>
                                 or the string <code>from_token</code>.
                                 <br>
                                 If a country code is specified, only content that is playable in that market is returned.
@@ -129,7 +128,7 @@
                                 - If market is set to <code>from_token</code>, and a valid access token is specified in the request header, only content playable in the country associated with the user account, is returned.
                                 <br>
                                 - Users can view the country that is associated with their account in the 
-                                <a class="table-link" href="https://www.spotify.com/na-en/account/overview/" target="_blank">account settings</a>. 
+                                <a class="link" href="https://www.spotify.com/na-en/account/overview/" target="_blank">account settings</a>. 
                                 A user must grant access to the <code>user-read-private</code> scope prior to when the access token is issued.
                             </td>
                             <td>String</td>
@@ -181,7 +180,7 @@
                                 <br>
                                 Possible values: audio
                                 <br>
-                                If include_external=audio is specified the response will include any relevant audio content that is hosted externally.
+                                If <code>include_external=audio</code> is specified the response will include any relevant audio content that is hosted externally.
                                 <br>
                                 By default external content is filtered out from responses.
                             </td>
@@ -189,6 +188,31 @@
                             <td class="optional-parameter">Optional</td>
                         </tr>
                     </table>
+                </div>
+
+                <!-- Search response -->
+                <div class="response">
+                    <header>Response</header>
+                    <span>On success</span>:
+                    <ul>
+                        <li>In the response <b><i>header</i></b> the HTTP status code is <code>200</code> OK.</li>
+                        <li>
+                            For each type provided in the <code>type</code> parameter, the response <b><i>body</i></b> contains an array of 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-artistobject" target="_blank">artist objects</a> / 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-simplifiedalbumobject" target="_blank">simplified album objects</a> / 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-trackobject" target="_blank">track objects</a> / 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-simplifiedshowobject" target="_blank">simplified show objects</a> / 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-simplifiedepisodeobject" target="_blank">simplified episode objects</a> 
+                            wrapped in a 
+                            <a class="link" href="https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject" target="_blank">paging object</a>
+                            in JSON.
+                        </li>
+                    </ul>
+                    <span>On error</span>:
+                    <ul>
+                        <li>The <b><i>header</i></b> status code is an <a class="link" href="https://developer.spotify.com/documentation/web-api/#response-status-codes" target="_blank">error code</a>.</li>
+                        <li>The <b><i>response</i></b> body contains an <a class="link" href="https://developer.spotify.com/documentation/web-api/#response-schema" target="_blank">error object</a>.</li>
+                    </ul>
                 </div>
             </ul>
         </section>

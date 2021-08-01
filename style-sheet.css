@@ -75,32 +75,27 @@ main{
     overflow: hidden;
 }
 
-/* Main sections */
+/* Main section general */
 .main-section{
     font-size: calc(16px + .1vh);
 }
 .main-section header{
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.main-section .section-header{
     font-size: 250%;
     font-weight: bold;
 }
 .main-section ul{
     list-style: none;
 }
-.main-section li{
+.main-section .api-function{
     font-size: 160%;
     font-weight: bold;
 }
 .main-section div{
-    font-size: 110%;
-}
-.main-section table{
-    font-size: 80%;
-    border-collapse: collapse;
-    line-height: 1.5;
-    width: 100%;
-}
-.main-section .table-item{
-    font-size: 120%;
+    padding-bottom: 10px;
 }
 .main-section code{
     background: gainsboro;
@@ -109,15 +104,53 @@ main{
     border-radius: 3px;
 }
 
+/* Main section request table */
+.main-section .request{
+    font-size: 110%;
+}
+.main-section .request table{
+    font-size: 80%;
+    border-collapse: collapse;
+    line-height: 1.5;
+    width: 100%;
+}
+.main-section .request .table-item{
+    font-size: 120%;
+}
+.main-section .request .required-parameter{
+    font-weight: bold;
+}
+.main-section .request .optional-parameter{
+    font-style: italic;
+}
+
+/* Main section response result */
+.main-section .response{
+    font-size: 110%;
+}
+.main-section .response span{
+    font-size: 90%;
+    font-weight: bold;
+}
+.main-section .response ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 90%;
+    list-style: disc;
+}
+.main-section .response li{
+    margin: 10px;
+}
+
 /* Table classes */
 .type-required{
     width: 10%;
 }
-.table-link{
+.link{
     text-decoration: none;
     color: orange;
 }
-.table-link:hover{
+.link:hover{
     color: #e69500
 }
 .required-parameter{

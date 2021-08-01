@@ -80,31 +80,51 @@ main{
     font-size: calc(16px + .1vh);
 }
 .main-section header{
-    font-size: calc(40px + .25vh);
+    font-size: 250%;
     font-weight: bold;
 }
 .main-section ul{
     list-style: none;
 }
 .main-section li{
-    font-size: calc(20px + .125vh);
+    font-size: 125%;
     font-weight: bold;
 }
-.main-section .sub-header{
-    font-size: calc(20px + .125vh);
+.main-section div{
+    font-size: 125%;
 }
-
-/* Table content */
-table{
+.main-section table{
+    font-size: 80%;
     border-collapse: collapse;
     line-height: 1.5;
     width: 100%;
 }
-code{
+.main-section .table-item{
+    font-size: 120%;
+}
+.main-section code{
     background: gainsboro;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 3px;
+}
+
+/* Table classes */
+.type-required{
+    width: 10%;
+}
+.table-link{
+    text-decoration: none;
+    color: orange;
+}
+.table-link:hover{
+    color: #e69500
+}
+.required-parameter{
+    font-weight: bold;
+}
+.optional-parameter{
+    font-style: italic;
 }
 
 /* Table rows */
@@ -130,27 +150,6 @@ th{
     text-align: left;
     font-weight: normal;
     padding-bottom: 5px;
-}
-
-/* Table classes */
-.type-required{
-    width: 10%;
-}
-.table-link{
-    text-decoration: none;
-    color: orange;
-}
-.table-link:hover{
-    color: #e69500
-}
-.table-item{
-    font-size: 120%;
-}
-.required-parameter{
-    font-weight: bold;
-}
-.optional-parameter{
-    font-style: italic;
 }
 
 /* Extra small devices (phones, 768px and down) */

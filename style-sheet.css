@@ -100,11 +100,11 @@ code{
     max-width: 100%;
     overflow: hidden;
 }
-.link{
+a{
     text-decoration: none;
     color: orange;
 }
-.link:hover{
+a:hover{
     color: #e69500
 }
 

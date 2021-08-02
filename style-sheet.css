@@ -71,16 +71,30 @@ main{
     margin-right: 30px;
     display: flex;
     flex-direction: column;
+    font-size: calc(16px + .1vh);
+}
+main div{
+    padding-bottom: 10px;
+}
+code{
+    background: gainsboro;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
 }
 .stop-scrolling{
     max-width: 100%;
     overflow: hidden;
 }
+.link{
+    text-decoration: none;
+    color: orange;
+}
+.link:hover{
+    color: #e69500
+}
 
 /* Main section general */
-.main-section{
-    font-size: calc(16px + .1vh);
-}
 .main-section header{
     font-weight: bold;
     padding-bottom: 20px;
@@ -95,22 +109,6 @@ main{
 .main-section .api-query{
     font-size: 160%;
     font-weight: bold;
-}
-.main-section div{
-    padding-bottom: 10px;
-}
-.main-section code{
-    background: gainsboro;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 3px;
-}
-.main-section .link{
-    text-decoration: none;
-    color: orange;
-}
-.main-section .link:hover{
-    color: #e69500
 }
 
 /* Main section query request */

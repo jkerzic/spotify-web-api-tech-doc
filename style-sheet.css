@@ -73,6 +73,9 @@ main{
     flex-direction: column;
     font-size: calc(16px + .1vh);
 }
+main header{
+    font-weight: bold;
+}
 main div{
     padding-bottom: 10px;
 }
@@ -81,6 +84,17 @@ code{
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 3px;
+}
+.section-header{
+    font-size: 250%;
+}
+.api-query-list{
+    list-style: none;
+    margin-left: -40px;
+}
+.api-query{
+    font-size: 160%;
+    font-weight: bold;
 }
 .stop-scrolling{
     max-width: 100%;
@@ -96,19 +110,7 @@ code{
 
 /* Main section general */
 .main-section header{
-    font-weight: bold;
     padding-bottom: 20px;
-}
-.main-section .section-header{
-    font-size: 250%;
-}
-.main-section .api-query-list{
-    list-style: none;
-    margin-left: -40px;
-}
-.main-section .api-query{
-    font-size: 160%;
-    font-weight: bold;
 }
 
 /* Main section query request */

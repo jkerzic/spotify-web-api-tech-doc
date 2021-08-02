@@ -68,6 +68,7 @@
 /* Main container */
 html{
     font-size: calc(16px + .1vh);
+    font-family: "Open Sans", "Lato", "Helvetica", sans-serif, serif;
 }
 main{
     margin-left: 30px;

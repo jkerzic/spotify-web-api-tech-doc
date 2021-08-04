@@ -126,9 +126,13 @@ a:hover{
     list-style: none;
     margin-left: -40px;
 }
+.main-section .api-query-list li:first-child{
+    padding-top: 0px;
+}
 .main-section .api-query{
     font-size: 160%;
     font-weight: bold;
+    padding-top: 50px;
 }
 
 /* Main section query request */
@@ -165,10 +169,10 @@ a:hover{
     padding-top: 5px;
     padding-bottom: 15px;
 }
-.main-section .request .required-parameter{
+.main-section .request .required{
     font-weight: bold;
 }
-.main-section .request .optional-parameter{
+.main-section .request .optional{
     font-style: italic;
 }
 .main-section .request .type-required{

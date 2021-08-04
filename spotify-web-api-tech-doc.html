@@ -127,7 +127,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Album -->
                 <li class="api-query" id="get-album">Get an Album</li>
@@ -158,7 +160,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Album's Tracks -->
                 <li class="api-query" id="get-album-tracks">Get an Album's Tracks</li>
@@ -189,7 +193,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             </ul>
         </section>
@@ -228,7 +234,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Artist -->
                 <li class="api-query" id="get-artist">Get an Artist</li>
@@ -259,7 +267,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Artist's Top Tracks -->
                 <li class="api-query" id="get-artist-top-tracks">Get an Artist's Top Tracks</li>
@@ -290,7 +300,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Artist's Related Artists -->
                 <li class="api-query" id="get-related-artists">Get an Artist's Related Artists</li>
@@ -323,7 +335,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             <!-- Get an Artist's Albums -->
                 <li class="api-query" id="get-artist-albums">Get an Artist's Albums</li>
@@ -354,7 +368,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
                 
             </ul>
         </section>
@@ -393,7 +409,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get All Featured Playlists -->
                 <li class="api-query" id="get-featured-playlists">Get All Featured Playlists</li>
@@ -424,7 +442,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get All Categories -->
                 <li class="api-query" id="get-all-categories">Get All Categories</li>
@@ -455,7 +475,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get a Category -->
                 <li class="api-query" id="get-category">Get a Category</li>
@@ -486,7 +508,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get a Category's Playlists -->
                 <li class="api-query" id="get-category-playlists">Get a Category's Playlists</li>
@@ -517,7 +541,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get Recommendations -->
                 <li class="api-query" id="get-recommendations">Get Recommendations</li>
@@ -553,7 +579,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get Recommendation Genres -->
                 <li class="api-query" id="get-recommendation-genres">Get Recommendation Genres</li>
@@ -586,7 +614,10 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
+
             </ul>
         </section>
 
@@ -612,23 +643,90 @@
                         </tr>
 
                         <tr>
-                            <code class="table-item"></code>
+                            <td>
+                                <code class="table-item">Authorization</code>
+                                <br>
+                                A valid access token from the Spotify Accounts service: see the
+                                <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" target="_blank">Web Authorization Guide</a> 
+                                for details. The access token must have been issued on behalf of the user.
+                                <br>
+                                Following a playlist publicly requires authorization of the <code>playlist-modify-public</code> scope; following a playlist
+                                privately requires the <code>playlist-modify-private</code> scope. See
+                                <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes" target="_blank">Using Scopes</a>.
+                                <br>
+                                <i>Note that the scopes you provide relate only to whether the current user is following the playlist publicly or privately (i.e showing 
+                                    others what they are following), not whether the playlist itself is public or private.
+                                </i>
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code class="table-item">Content-Type</code>
+                                <br>
+                                The content type of the request body: <code>application/json</code>
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
                         </tr>
                     </table>
                     <br>
 
-                    <!-- Query parameters -->
+                    <!-- Path parameters -->
                     <table>
                         <tr>
-                            <th>QUERY PARAMETER</th>
+                            <th>PATH PARAMETER</th>
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code class="table-item">{playlist_id}</code>
+                                <br>
+                                The <a href="https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids" target="_blank">Spotify ID</a> of
+                                the playlist. Any playlist can be followed, regardless of its
+                                <a href="https://developer.spotify.com/documentation/general/guides/working-with-playlists/#public-private-and-collaborative-status" target="_blank">public/private status</a>, 
+                                as long as you know its playlist ID.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <!-- JSON body parameters -->
+                    <table>
+                        <tr>
+                            <th>JSON BODY PARAMETER</th>
+                            <th class="type-required">TYPE</th>
+                            <th class="type-required">REQUIRED</th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <code class="table-item">public</code>
+                                <br>
+                                Defaults to <code>true</code>. If <code>true</code> the playlist will be included
+                                in the user's public playlists. If <code>false</code> it will remain private.
+                            </td>
+                            <td>Boolean</td>
+                            <td class="optional">Optional</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                    On success, the HTTP status code in the response header is <code>200</code> OK and the response body 
+                    is empty. On error, the header status code is an
+                    <a href="https://developer.spotify.com/documentation/web-api/#response-status-codes" target="_blank">error code</a>
+                    and the response body contains an
+                    <a href="https://developer.spotify.com/documentation/web-api/#response-schema" target="_blank">error object</a>.
+                </div>
 
             <!-- Unfollow Playlist -->
                 <li class="api-query" id="unfollow-playlist">Unfollow Playlist</li>
@@ -660,7 +758,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Check if Users Follow a Playlist -->
                 <li class="api-query" id="check-follow-playlist">Check if Users Follow a Playlist</li>
@@ -691,7 +791,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get User's Followed Artists -->
                 <li class="api-query" id="get-followed-artists">Get User's Followed Artists</li>
@@ -722,7 +824,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Follow Artists or Users -->
                 <li class="api-query" id="follow-artist-user">Follow Artists or Users</li>
@@ -753,7 +857,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Unfollow Artists or Users -->
                 <li class="api-query" id="unfollow-artist-user">Unfollow Artists or Users</li>
@@ -784,7 +890,9 @@
                 </div>
 
                 <!-- Query response -->
-                <div class="response"></div>
+                <div class="response">
+                    <header>Response</header>
+                </div>
 
             <!-- Get Following State for Artists/Users -->
                 <li class="api-query" id="get-following-state">Get Following State for Artists/Users</li>
@@ -816,6 +924,8 @@
 
                 <!-- Query response -->
                 <div class="response">
+                    <header>Response</header>
+                </div>
 
                 </div>
             </ul>
@@ -852,7 +962,7 @@
                                 for details.
                             </td>
                             <td>String</td>
-                            <td class="required-parameter">Required</td>
+                            <td class="required">Required</td>
                         </tr>
                     </table>
                     <br>
@@ -877,7 +987,7 @@
                                 <code>q=roadhouse%20blues</code>.
                             </td>
                             <td>String</td>
-                            <td class="required-parameter">Required</td>
+                            <td class="required">Required</td>
                         </tr>
 
                         <!-- Query search type -->
@@ -894,7 +1004,7 @@
                                 For example: <code>q=name:abacab&type=album,track</code> returns both albums <i><b>and</b></i> tracks with “abacab” included in their name.
                             </td>
                             <td>String</td>
-                            <td class="required-parameter">Required</td>
+                            <td class="required">Required</td>
                         </tr>
 
                         <!-- Query market -->
@@ -918,7 +1028,7 @@
                                 A user must grant access to the <code>user-read-private</code> scope prior to when the access token is issued.
                             </td>
                             <td>String</td>
-                            <td class="optional-parameter">Optional</td>
+                            <td class="optional">Optional</td>
                         </tr>
 
                         <!-- Query result limit -->
@@ -939,7 +1049,7 @@
                                 For example, if the limit value is 3 and the type is <code>artist,album</code>, the response contains 3 artists and 3 albums.
                             </td>
                             <td>Integer</td>
-                            <td class="optional-parameter">Optional</td>
+                            <td class="optional">Optional</td>
                         </tr>
 
                         <!-- Query result index-->
@@ -956,7 +1066,7 @@
                                 Use with limit to get the next page of search results.
                             </td>
                             <td>Integer</td>
-                            <td class="optional-parameter">Optional</td>
+                            <td class="optional">Optional</td>
                         </tr>
 
                         <!-- Query external content -->
@@ -971,7 +1081,7 @@
                                 By default external content is filtered out from responses.
                             </td>
                             <td>String</td>
-                            <td class="optional-parameter">Optional</td>
+                            <td class="optional">Optional</td>
                         </tr>
                     </table>
                 </div>

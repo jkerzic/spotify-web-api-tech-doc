@@ -642,6 +642,7 @@
                             <th class="type-required">REQUIRED</th>
                         </tr>
 
+                        <!-- Authorization -->
                         <tr>
                             <td>
                                 <code class="table-item">Authorization</code>
@@ -662,6 +663,7 @@
                             <td class="required">Required</td>
                         </tr>
 
+                        <!-- Content-Type -->
                         <tr>
                             <td>
                                 <code class="table-item">Content-Type</code>
@@ -744,15 +746,44 @@
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <code class="table-item">Authorization</code>
+                                <br>
+                                A valid access token from the Spotify Accounts service: see the
+                                <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/" target="_blank">Web Authorization Guide</a> 
+                                for details. The access token must have been issued on behalf of the user.
+                                <br>
+                                Unfollowing a publicly followed playlist for a user requires authorization of the <code>playlist-modify-public</code> scope; unfollowing a 
+                                privately followed playlist requires the <code>playlist-modify-private</code> scope. See
+                                <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes" target="_blank">Using Scopes</a>.
+                                <br>
+                                <i>Note that the scopes you provide relate only to whether the current user is following the playlist publicly or privately (i.e showing 
+                                    others what they are following), not whether the playlist itself is public or private.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
                     </table>
                     <br>
 
                     <!-- Query parameters -->
                     <table>
                         <tr>
-                            <th>QUERY PARAMETER</th>
+                            <th>PATH PARAMETER</th>
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="table-item">{playlist_id}</code>
+                                <br>
+                                The <a href="https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids" target="_blank">Spotify ID</a> of
+                                the playlist that is to be no longer followed.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
                         </tr>
                     </table>
                 </div>
@@ -760,6 +791,11 @@
                 <!-- Query response -->
                 <div class="response">
                     <header>Response</header>
+                    On success, the HTTP status code in the response header is <code>200</code> OK and the response body 
+                    is empty. On error, the header status code is an
+                    <a href="https://developer.spotify.com/documentation/web-api/#response-status-codes" target="_blank">error code</a>
+                    and the response body contains an
+                    <a href="https://developer.spotify.com/documentation/web-api/#response-schema" target="_blank">error object</a>.
                 </div>
 
             <!-- Check if Users Follow a Playlist -->

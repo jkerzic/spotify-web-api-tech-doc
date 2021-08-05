@@ -818,6 +818,40 @@
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
                         </tr>
+
+                        <!-- Authorization -->
+                        <tr>
+                            <td>
+                                <code class="table-item">Authorization</code>
+                                <br>
+                                A valid user access token or your client credentials. Requires the <code>playlist-read-private</code> 
+                                scope if a private playlist is requested.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+                    </table>
+                    <br>
+
+                    <!-- Path parameters -->
+                    <table>
+                        <tr>
+                            <th>PATH PARAMETER</th>
+                            <th class="type-required">TYPE</th>
+                            <th class="type-required">REQUIRED</th>
+                        </tr>
+                        
+                        <!-- {playlist_id} parameter -->
+                        <tr>
+                            <td>
+                                <code class="table-item">{playlist_id}</code>
+                                <br>
+                                The <a href="https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids" target="_blank">Spotify ID</a> 
+                                of the playlist.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
                     </table>
                     <br>
 
@@ -828,12 +862,28 @@
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
                         </tr>
+
+                        <!-- ids parameter -->
+                        <tr>
+                            <td>
+                                <code class="table-item">ids</code>
+                                <br>
+                                A comma-separated list of <a href="https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids" target="_blank">Spotify User IDs</a> ; 
+                                the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
                     </table>
                 </div>
 
                 <!-- Query response -->
                 <div class="response">
                     <header>Response</header>
+                    On success, the HTTP status code in the response header is <code>200</code> OK and the response body contains
+                    a JSON array of <code>true</code> or <code>false</code> values, in the same order in which the <code>ids</code> 
+                    were specified. On error, the header status code is an <a href="https://developer.spotify.com/documentation/web-api/#response-status-codes" target=_blank>error code</a> 
+                    and the response body contains an <a href="https://developer.spotify.com/documentation/web-api/#response-schema" target="_blank">error object</a>.
                 </div>
 
             <!-- Get User's Followed Artists -->

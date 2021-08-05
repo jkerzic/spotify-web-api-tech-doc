@@ -901,6 +901,17 @@
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
                         </tr>
+
+                        <!-- Authorization -->
+                        <tr>
+                            <td>
+                                <code class="table-item">Authorization</code>
+                                <br>
+                                A valid user access token or your client credentials. Requires the <code>user-follow-modify</code> scope.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
                     </table>
                     <br>
 
@@ -911,12 +922,50 @@
                             <th class="type-required">TYPE</th>
                             <th class="type-required">REQUIRED</th>
                         </tr>
+
+                        <!-- type parameter -->
+                        <tr>
+                            <td>
+                                <code class="table-item">type</code>
+                                <br>
+                                The ID type: currently only <code>artist</code> is supported.
+                            </td>
+                            <td>String</td>
+                            <td class="required">Required</td>
+                        </tr>
+
+                        <!-- after parameter -->
+                        <tr>
+                            <td>
+                                <code class="table-item">after</code>
+                                <br>
+                                The last artist ID retrieved from the previous request.
+                            </td>
+                            <td>String</td>
+                            <td class="optional">Optional</td>
+                        </tr>
+
+                        <!-- limit parameter -->
+                        <tr>
+                            <td>
+                                <code class="table-item">limit</code>
+                                <br>
+                                The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
+                            </td>
+                            <td>Integer</td>
+                            <td class="optional">Optional</td>
+                        </tr>
                     </table>
                 </div>
 
                 <!-- Query response -->
                 <div class="response">
                     <header>Response</header>
+                    On success, the HTTP status code in the response header is <code>200</code> OK and the response body contains
+                    an <code>artists</code> object. The <code>artists</code> object in turn contains a 
+                    <a href="https://developer.spotify.com/documentation/web-api/reference/#object-cursorpagingobject" target="_blank">cursor-based paging object</a> of <a href="https://developer.spotify.com/documentation/web-api/reference/#object-artistobject" target="_blank">Artists</a>. 
+                    On error, the header status code is an <a href="https://developer.spotify.com/documentation/web-api/#response-status-codes" target=_blank>error code</a> 
+                    and the response body contains an <a href="https://developer.spotify.com/documentation/web-api/#response-schema" target="_blank">error object</a>.
                 </div>
 
             <!-- Follow Artists or Users -->
